@@ -1,0 +1,67 @@
+<!-- Special version of Bootstrap that only affects content wrapped in .bootstrap-iso -->
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <title>Segitiga</title>
+</head>
+
+<body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <h3>Menampilkan Segitiga</h3>
+                    <form id="form_segitiga" method="post" action="segitiga.php">
+                        <div class="form-group">
+                            <label class="control-label requiredField" for="jenis_segitiga">Jenis Segitiga</label> 
+                            <select class="select form-control" id="jenis_segitiga" name="jenis_segitiga">
+                                <option value="A">
+                                    A
+                                </option>
+
+                                <option value="B">
+                                    B
+                                </option>
+
+                                <option value="C">
+                                    C
+                                </option>
+
+                                <option value="D">
+                                    D
+                                </option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label requiredField" for="karakter_segitiga">Karakter Segitiga</label> 
+                            <input class="form-control" id="karakter_segitiga" name="karakter_segitiga" placeholder="Example *, # etc" type="text" maxlength="1" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label requiredField" for="panjang_sisi_segitiga">Panjang Sisi Segitiga</label>
+                            <input class="form-control" id="panjang_sisi_segitiga" name="panjang_sisi_segitiga" placeholder="Masukkan angka &gt;= 2" type="number" required>
+                        </div>
+
+                        <div class="form-group">
+                            <div>
+                                <button class="btn btn-primary" name= "submit" type="submit">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="div_progress_bar" class="progress" style="display:none">
+                        <div class="progress-bar progress-bar-striped active" style="width:100%"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="result">Result</label>
+                        <textarea class="form-control" rows="8" id="result"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <script src="js/jquery.min.js"></script> <script src="js/bootstrap.min.js"></script> <script src="js/scripts.js"></script>
+</body>
+
+</html>
